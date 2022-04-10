@@ -198,7 +198,7 @@ run;quit;
 libname sd1 clear;
 
 filename sd1 "d:/sd1/class.sas7bdat";
-filename zip zip "d:/zip/class.sas7bdat,gz" member="class.sas7bdat";
+filename zip zip "d:/zip/class.sas7bdat.gz" member="class.sas7bdat";
 
 data _null_;
    infile sd1 recfm=n;
@@ -209,7 +209,7 @@ run;
 
 %utlfkil(d:/sd1/class.sas7bdat);
 
-filename inzip zip "d:/zip/class.sas7bdat,gz" member="class.sas7bdat";
+filename inzip zip "d:/zip/class.sas7bdat.gz" member="class.sas7bdat";
 filename sd1 "d:/sd1/class.sas7bdat";
 
 data _null_;
