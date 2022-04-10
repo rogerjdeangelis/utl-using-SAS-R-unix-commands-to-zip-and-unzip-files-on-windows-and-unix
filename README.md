@@ -200,7 +200,7 @@ Using SAS R unix commands to zip and unzip files on windows and unix
     libname sd1 clear;
 
     filename sd1 "d:/sd1/class.sas7bdat";
-    filename zip zip "d:/zip/class.sas7bdat,gz" member="class.sas7bdat";
+    filename zip zip "d:/zip/class.sas7bdat.gz" member="class.sas7bdat";
 
     data _null_;
        infile sd1 recfm=n;
@@ -211,7 +211,7 @@ Using SAS R unix commands to zip and unzip files on windows and unix
 
     %utlfkil(d:/sd1/class.sas7bdat);
 
-    filename inzip zip "d:/zip/class.sas7bdat,gz" member="class.sas7bdat";
+    filename inzip zip "d:/zip/class.sas7bdat.gz" member="class.sas7bdat";
     filename sd1 "d:/sd1/class.sas7bdat";
 
     data _null_;
